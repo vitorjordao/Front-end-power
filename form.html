@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="text/javascript" src="JS/Controller.js"></script>
+    <script type="text/javascript" src="JS/Pessoa.js"></script>
+    <title>Form</title>
+</head>
+<body>
+    
+    <form>
+
+        <div>
+            <label for="name">Nome: </label>
+            <input type="text" name="name" id="name" required>
+        </div>
+
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label for="age">Idade: </label>
+            <input type="number" min="0" step="5" name="age" id="age" required>
+        </div>
+
+        <div>
+            Preferencias:
+            <div>
+                <label for="tipo1">Tipo 1</label>
+                <input type="checkbox" name="tipo1" id="tipo1">
+            </div>
+            
+            <div>
+                <label for="tipo2">Tipo 2</label>
+                <input type="checkbox" name="tipo2" id="tipo2">
+            </div>
+        </div>
+
+        <div>
+            Sexo:
+            <div>
+                <label for="male">Homem</label>
+                <input type="radio" name="genero" id="male">
+            </div>
+            
+            <div>
+                <label for="female">Mulher<label>
+                <input type="radio" name="genero" id="female">
+            </div>
+        </div>
+
+        <button type="reset">Cancelar</button>
+        <button type="submit" onclick="new Controller();">Salvar</button>
+
+    </form>
+
+</body>
+</html>
