@@ -1,6 +1,4 @@
-class Controller {
-    constructor() {
-        event.preventDefault();
-        console.log("teste");
-    }
-}
+let cadastrar = () => {
+    event.preventDefault();
+    console.log("teste");
+};
