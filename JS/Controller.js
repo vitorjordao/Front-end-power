@@ -22,7 +22,7 @@ let criaPessoa = () => {
     return new Pessoa(name, email, age, tipo1, tipo2, isMale);
 }
 
-let valida = (event) => {
+let valida = event => {
     let elm = event.target;
     if(elm.id === "email"){
         let alerta = "";
@@ -33,12 +33,19 @@ let valida = (event) => {
             alerta += '* É necessário ter "." no email<br>';
         }
         
-        let div = document.getElementById("alerta");
-        if(alerta){
-            div.innerHTML = alerta;
-        } else {
-            div.innerHTML = "";
-        }
+        enviaAlerta(alerta);
+    }
+}
+
+let enviaAlerta = alerta => {
+    let div = document.getElementById("alerta");
+    let salvar = document.getElementsByTagName("button")[1];
+    if(alerta){
+        div.innerHTML = alerta;
+        salvar.setAttribute("disabled", "disabled");
+    } else {
+        div.innerHTML = "";
+        salvar.removeAttribute("disabled");
     }
 }
 
