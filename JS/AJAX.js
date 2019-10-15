@@ -7,8 +7,8 @@ const AJAX = function (method, uri, data = null)
             let xhr = new XMLHttpRequest();
 
             xhr.open(method, uri, true);
-            //xhr.setRequestHeader("Content-Type", "application/json");
-
+            xhr.setRequestHeader("Content-Type", "application/json");
+            
             if (!!data)
                 xhr.send(data);
             
@@ -30,7 +30,7 @@ const AJAX = function (method, uri, data = null)
                             Reject(xhr.status, ": FALHA NA API.");
 
                         default:
-                            Reject("ERRO");
+                            Reject(xhr.status, ": ERRO");
                             break;
                     }
             }

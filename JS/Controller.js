@@ -1,7 +1,14 @@
 let cadastrar = () => {
     event.preventDefault();
     let pessoa = criaPessoa();
-    console.log(pessoa);
+    //console.log(pessoa);
+
+    AJAX("POST", "https://api-para-minicurso.herokuapp.com/cadastrar", JSON.stringify(pessoa))
+        .then(res => console.log(res));
+
+    AJAX("GET", "https://api-para-minicurso.herokuapp.com/getPessoas")
+        .then(response => console.log(response));
+
 };
 
 let criaPessoa = () => {
