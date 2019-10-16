@@ -4,11 +4,13 @@ let cadastrar = () => {
     //console.log(pessoa);
 
     AJAX("POST", "https://api-para-minicurso.herokuapp.com/cadastrar", pessoa)
-        .then(res => console.log(res));
+        .then((response) => 
+        {
+            console.log(response);
 
-    AJAX("GET", "https://api-para-minicurso.herokuapp.com/getPessoas")
-        .then(response => console.log(response));
-
+            AJAX("GET", "https://api-para-minicurso.herokuapp.com/getPessoas")
+            .then(response => console.log(response));
+        });
 };
 
 let criaPessoa = () => {
