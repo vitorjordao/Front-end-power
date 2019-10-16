@@ -17,10 +17,10 @@ let dizerAlgo = function (nome, callback)
     return callback(nome);
 };
 
-let a = hiFunction("Ottoniel");
-let b = byeFunction("Ottoniel");
+let hi = hiFunction("Ottoniel");
+let bye = byeFunction("Ottoniel");
 
-let c = dizerAlgo("Ottoniel", byeFunction);
+let saySomething = dizerAlgo("Ottoniel", byeFunction);
 
-console.log(a, b, c);
+console.log(hi, bye, saySomething);
 

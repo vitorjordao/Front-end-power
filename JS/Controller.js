@@ -3,7 +3,7 @@ let cadastrar = () => {
     let pessoa = criaPessoa();
     //console.log(pessoa);
 
-    AJAX("POST", "https://api-para-minicurso.herokuapp.com/cadastrar", JSON.stringify(pessoa))
+    AJAX("POST", "https://api-para-minicurso.herokuapp.com/cadastrar", pessoa)
         .then(res => console.log(res));
 
     AJAX("GET", "https://api-para-minicurso.herokuapp.com/getPessoas")

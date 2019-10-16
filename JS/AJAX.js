@@ -10,7 +10,7 @@ const AJAX = function (method, uri, data = null)
             xhr.setRequestHeader("Content-Type", "application/json");
             
             if (!!data)
-                xhr.send(data);
+                xhr.send(JSON.stringify(data));
             
             else
                 xhr.send();
@@ -30,7 +30,7 @@ const AJAX = function (method, uri, data = null)
                             Reject(xhr.status, ": FALHA NA API.");
 
                         default:
-                            Reject(xhr.status, ": ERRO");
+                            Reject(xhr.status, ": ERRO INESPERADO.");
                             break;
                     }
             }
